@@ -3,13 +3,13 @@ import matplotlib.pyplot as plt
 import os  # Import the os module to handle directory paths
 
 # Load your data into a DataFrame (replace this with your actual data loading code)
-df = pd.read_csv(r"C:\Users\Acer\OneDrive - Bicol University\Desktop\Design Project Tools\version7\resulta.csv")
+df = pd.read_csv(r"C:\Users\Acer\OneDrive - Bicol University\Desktop\results.csv")
 
 # Print available columns to confirm
 print("Available columns:", df.columns)
 
 # Define the directory where you want to save the PNG files
-output_directory = "C:/Users/Acer/OneDrive - Bicol University/Desktop/Design Project Tools/plots"
+output_directory = r"C:\Users\Acer\OneDrive - Bicol University\Desktop\Design Project Tools\evaluation metrics"
 
 # Create the directory if it doesn't exist
 if not os.path.exists(output_directory):

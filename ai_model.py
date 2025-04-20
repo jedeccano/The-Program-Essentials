@@ -13,7 +13,7 @@ def start_ai_model():
 
     # Load the YOLO model
     try:
-        model = YOLO(r"C:\Users\Acer\OneDrive - Bicol University\Desktop\Design Project Tools\version7\et_yung_ai_model.pt")
+        model = YOLO(r"C:\Users\Acer\OneDrive - Bicol University\Desktop\model Versions\v26(SML-Defect)\best.pt")
     except Exception as e:
         print(f"Error loading model: {e}")
         return
@@ -52,7 +52,8 @@ def start_ai_model():
                 class_id = result.boxes[0].cls.item()
                 class_name = result.names[class_id]
                 print(f"Detected class: {class_name}")  # Debugging statement
-                control_servo_based_on_class(class_name)
+                control_servo_based_on_class(class_name)  # Control servo based on detected class
+        
 
         # Increment frame counter
         frame_counter += 1
